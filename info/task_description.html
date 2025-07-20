@@ -1,20 +1,36 @@
 <!-- Describe task in general -->
 <!-- <img src="{{MEDIA_CONVERT}}title.png" class="title_img" /> -->
 <p style="text-align: justify;">
-    Sum two passed ints
+    A new pandemic is always possible (and feared), but recent experience has shown that science is currently capable of developing effective vaccines in a very short time. Another consequence of the recent pandemic is that much has been studied about epidemics in general, and several mathematical models have been developed.
+</p>
+
+<p style="text-align: justify;">
+    In this problem we will use a simple epidemic model:
+    <ul>
+        <li>When a person is infected, they infect other <code>R</code> people, but only the day after their infection (<code>R</code> is called the reproductive factor of infection).</li>
+        <li>No one is infected more than once.</li>
+    </ul>
+</p>
+
+<p style="text-align: justify;">
+    For example, if on day 0 of the epidemic 3 people are infected and the reproductive factor R is equal to 2, then on day 1 another 6 people are infected (3 + 6 = 9 people in total), on day 2 another 12 people are infected (3 + 6 + 12 = 21 people in total), on day 3 another 24 people infected (3 + 6 + 12 + 24 = 45 people in total), and so on.
 </p>
 
 <p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+    <img  title="example" src="{{MEDIA}}epid_days.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    Given the initial number of people infected on day 0 <code>N</code> and the reproductive factor  of the epidemic <code>R</code>, write a program to determine the number of days it takes for the epidemic to infect <code>T</code> or more people in total.
 </p>
 
 <!-- Explain input and output values -->
 <p>
-    <strong>Input:</strong> Two arguments. Both are ints.
+    <strong>Input:</strong> Three integers <span translate="no">({% if is_js %}number{% else %}int{% endif %})</span>.
 </p>
 
 <p>
-    <strong>Output:</strong> Int. 
+    <strong>Output:</strong> Integer. 
 </p>
 
 
@@ -34,9 +50,9 @@
 
 <!-- Here you can explain some constraints for input-->
 <!-- The section is optional -->
-<!-- <p>
+<p>
     <strong>Preconditions:</strong>
     <ul>
-    <li><i>both given ints should be between -1000 and 1000</i></li>
+    <li><i>N, R, T > 0</i>.</li>
     </ul>
-</p> -->
+</p>
