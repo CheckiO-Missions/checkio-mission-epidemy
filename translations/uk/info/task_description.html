@@ -1,0 +1,58 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p style="text-align: justify;">
+    Нова пандемія завжди можлива (і її завжди бояться), але нещодавній досвід показав, що наука сьогодні здатна розробляти ефективні вакцини в дуже короткі терміни. Ще одним наслідком нещодавньої пандемії є те, що про епідемії загалом було багато вивчено, а також розроблено кілька математичних моделей.
+</p>
+
+<p style="text-align: justify;">
+    У цій задачі ми будемо використовувати просту модель епідемії:
+    <ul>
+        <li>Коли людина інфікована, вона заражає інших <code>R</code> людей, але тільки на наступний день після свого зараження (<code>R</code> називається репродуктивним фактором інфекції).</li>
+        <li>Ніхто не інфікується більше одного разу.</li>
+    </ul>
+</p>
+
+<p style="text-align: justify;">
+    Наприклад, якщо в 0-й день епідемії інфіковано 3 людини і репродуктивний фактор R дорівнює 2, то в 1-й день інфікується ще 6 осіб (3 + 6 = 9 осіб), в 2-й день інфікується ще 12 осіб (3 + 6 + 12 = 21 особа), в 3-й день інфікується ще 24 особи (3 + 6 + 12 + 24 = 45 осіб), і так далі.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}epid_days.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    За початковою кількістю людей, інфікованих у день 0 <code>N</code> та коефіцієнтом розмноження епідемії <code>R</code>, напишіть програму, яка визначить кількість днів, необхідних для того, щоб епідемія інфікувала <code>T</code> або більше людей.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Вхідні дані:</strong> Три цілих числа <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Вихідні дані:</strong> Ціле число. 
+</p>
+
+
+<p>
+    <strong>Приклади:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Вхідні дані:</strong>
+    <ul>
+    <li><i>N, R, T &gt; 0</i>.</li>
+    </ul>
+</p>
