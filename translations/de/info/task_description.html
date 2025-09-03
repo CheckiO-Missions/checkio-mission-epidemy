@@ -1,0 +1,58 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p style="text-align: justify;">
+    Eine neue Pandemie ist immer möglich (und gefürchtet), aber die jüngsten Erfahrungen haben gezeigt, dass die Wissenschaft derzeit in der Lage ist, in sehr kurzer Zeit wirksame Impfstoffe zu entwickeln. Eine weitere Folge der jüngsten Pandemie ist, dass viel über Epidemien im Allgemeinen geforscht wurde und mehrere mathematische Modelle entwickelt wurden.
+</p>
+
+<p style="text-align: justify;">
+    In diesem Problem werden wir ein einfaches Epidemiemodell verwenden:
+    <ul>
+        <li>Wenn eine Person infiziert ist, infiziert sie andere <code>R</code>, aber nur am Tag nach ihrer Infektion (<code>R</code> wird als Reproduktionsfaktor der Infektion bezeichnet).</li>
+        <li>Niemand wird mehr als einmal infiziert.</li>
+    </ul>
+</p>
+
+<p style="text-align: justify;">
+    Wenn zum Beispiel am Tag 0 der Epidemie 3 Personen infiziert sind und der Reproduktionsfaktor R gleich 2 ist, werden am Tag 1 weitere 6 Personen infiziert (3 + 6 = 9 Personen insgesamt), am Tag 2 weitere 12 Personen (3 + 6 + 12 = 21 Personen insgesamt), am Tag 3 weitere 24 Personen (3 + 6 + 12 + 24 = 45 Personen insgesamt) und so weiter.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}epid_days.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    Geben Sie die anfängliche Anzahl der am Tag 0 infizierten Personen <code>N</code> und den Reproduktionsfaktor der Epidemie <code>R</code> an und schreiben Sie ein Programm, um die Anzahl der Tage zu bestimmen, die die Epidemie benötigt, um insgesamt <code>T</code> oder mehr Personen zu infizieren.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> Drei ganze Zahlen <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> Ganzzahl. 
+</p>
+
+
+<p>
+    <strong>Beispiele:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Vorbedingungen:</strong>
+    <ul>
+    <li><i>N, R, T &gt; 0</i>.</li>
+    </ul>
+</p>
