@@ -1,0 +1,58 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p style="text-align: justify;">
+    新的大流行病总是可能发生的（也是人们所担心的），但最近的经验表明，科学目前能够在很短的时间内研制出有效的疫苗。最近大流行病的另一个后果是，人们对一般流行病进行了大量研究，并建立了一些数学模型。
+</p>
+
+<p style="text-align: justify;">
+    在这个问题中，我们将使用一个简单的流行病模型：
+    <ul>
+        <li>当一个人受到感染时，他也会感染其他<code>R</code> 人，但仅限于感染后的第二天（<code>R</code> 称为感染的繁殖因素）。</li>
+        <li>没有人会被感染多次。</li>
+    </ul>
+</p>
+
+<p style="text-align: justify;">
+    例如，如果在疫情发生的第 0 天有 3 人被感染，且生殖因子 R 等于 2，那么第 1 天又有 6 人被感染（3 + 6 = 总共 9 人），第 2 天又有 12 人被感染（3 + 6 + 12 = 总共 21 人），第 3 天又有 24 人被感染（3 + 6 + 12 + 24 = 总共 45 人），以此类推。
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}epid_days.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    给定第 0 天的初始感染人数<code>N</code> 和疫情的繁殖因子<code>R</code> ，写一个程序来确定疫情感染<code>T</code> 或更多人所需的天数。
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>输入</strong>三个整数 <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>输出：</strong>整数。 
+</p>
+
+
+<p>
+    <strong>示例</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>前提条件</strong>
+    <ul>
+    <li><i>N、R、T &gt; 0</i>。</li>
+    </ul>
+</p>
