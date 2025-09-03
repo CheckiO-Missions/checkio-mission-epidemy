@@ -1,0 +1,58 @@
+<!-- Describe task in general -->
+<img src="{{MEDIA_CONVERT}}title.png" class="title_img" />
+<p style="text-align: justify;">
+    Une nouvelle pandémie est toujours possible (et redoutée), mais l'expérience récente a montré que la science est actuellement capable de développer des vaccins efficaces dans un délai très court. Une autre conséquence de la récente pandémie est que les épidémies en général ont fait l'objet de nombreuses études et que plusieurs modèles mathématiques ont été développés.
+</p>
+
+<p style="text-align: justify;">
+    Dans ce problème, nous utiliserons un modèle épidémique simple:
+    <ul>
+        <li>Lorsqu'une personne est infectée, elle infecte d'autres personnes <code>R</code>, mais seulement le jour suivant son infection (<code>R</code> est appelé le facteur de reproduction de l'infection).</li>
+        <li>Personne n'est infecté plus d'une fois.</li>
+    </ul>
+</p>
+
+<p style="text-align: justify;">
+    Par exemple, si au jour 0 de l'épidémie, 3 personnes sont infectées et que le facteur de reproduction R est égal à 2, le jour 1, 6 autres personnes sont infectées (3 + 6 = 9 personnes au total), le jour 2, 12 autres personnes sont infectées (3 + 6 + 12 = 21 personnes au total), le jour 3, 24 autres personnes sont infectées (3 + 6 + 12 + 24 = 45 personnes au total), et ainsi de suite.
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}epid_days.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    Étant donné le nombre initial de personnes infectées le jour 0 <code>N</code> et le facteur de reproduction de l'épidémie <code>R</code>, écrivez un programme pour déterminer le nombre de jours nécessaires pour que l'épidémie infecte <code>T</code> ou plus de personnes au total.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Entrée:</strong> Trois nombres entiers <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Sortie:</strong> Entier. 
+</p>
+
+
+<p>
+    <strong>Exemples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Conditions préalables:</strong>
+    <ul>
+    <li><i>N, R, T &gt; 0</i>.</li>
+    </ul>
+</p>
